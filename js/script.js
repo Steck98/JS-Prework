@@ -3,7 +3,7 @@ randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 if (randomNumber == '1') {
   computerMove = 'kamień';
-} else if (randomNumber==2){
+} else if (randomNumber== 2){
   computerMove = 'papier';
 } else {
     computerMove = 'nożyce'
@@ -23,3 +23,14 @@ if (playerInput == '1') {
   playerMove = 'nożyce';
 }
 printMessage('Mój Ruch: ' + playerMove);
+
+function displayResult(playerMove, computerMove){
+    if ( playerMove == computerMove){
+        printMessage("Remis");
+    }
+    else if( (playerMove == 'kamień' && computerMove == 'papier') || (playerMove == 'papier' && computerMove == 'nożyce') || (playerMove == 'nożyce' && computerMove == 'kamień')){
+        printMessage("przegrałeś")}
+    else printMessage("Wygrałeś")
+    
+}
+displayResult(playerMove, computerMove);
