@@ -12,29 +12,51 @@
     height: 100vh;
     text-align: center;
     line-height: 20px;
-    
+    background: url(https://cdn.pixabay.com/photo/2021/04/29/19/56/woman-6217377_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 .btn{
+    height: 300px;
+    width: 300px;
+    color: rgba(0, 0, 0,0);
+    margin-bottom:40px;
+}
+.btn:first-child{
+    
+    background-image: url(https://gfx.antyradio.pl/var/antyradio/storage/images/film/news/dwayne-the-rock-johnson-zagra-w-filmach-marvela-w-kogo-mialby-sie-wcielic-gwiazdor-szybkich-i-wscieklych-34037/10569881-3-pol-PL/Dwayne-The-Rock-Johnson-zagra-w-filmach-Marvela-W-kogo-mialby-sie-wcielic-gwiazdor-Szybkich-i-wscieklych_size-360x270.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn:nth-child(2){
+background-image: url(https://s.inyourpocket.com/gallery/warsaw/2020/03/toilet-paper-Alexas-photos%20on%20Pixabay.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.btn:nth-child(3){
+    background-image: url(https://static6.depositphotos.com/1003153/570/v/950/depositphotos_5705313-stock-illustration-censored-stamp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container>button{
     height: 40px;
     width: 100px;
-    color: red;
-    margin-bottom:40px;
+    color: black;
+    margin-top: 20px;
 }
 .win{
     color: greenyellow;
-    background-color: black;
     border-radius: 50%;
     width: 80px;
 }
 .lose{
     color: red;
-    background-color: black;
     border-radius: 50%;
     width: 80px;
 }
 .draw{
     color: yellow;
-    background-color: black;
     border-radius: 50%;
     width: 80px;
 }

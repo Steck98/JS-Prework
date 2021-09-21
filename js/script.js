@@ -14,6 +14,11 @@ buttons.forEach((button) => {
     if (button.innerText == "Nożyce") {
       playerMove = "Nożyce";}
       printMessage(`Mój ruch: ${playerMove}`);
+    if (button.innerText == "Reset")  {
+      playerMove = "Reset";
+      
+    }  
+      
     
       var computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -21,11 +26,14 @@ if (randomNumber == '1') {
   computerMove = 'Kamień';
 } else if (randomNumber== '2'){
   computerMove = 'Papier';
-} else {
+} else {randomNumber== '3'
     computerMove = 'Nożyce'
 }
 printMessage('Ruch Komputera: ' + computerMove);
 displayResult(playerMove, computerMove);
+if (playerMove == "Reset"){
+  clearMessages()
+}
     }
   )
 });
@@ -56,11 +64,17 @@ function displayResult(playerMove, computerMove){
       wynik.innerText = `Wynik Komputera: ${scoreAI++}
       Twoj Wynik: ${scorePlayer}`;
         result.classList.add('lose');}
-    else {
+    else if( (playerMove == 'Kamień' && computerMove == 'Nożyce') || (playerMove == 'Papier' && computerMove == 'Kamień') || (playerMove == 'Nożyce' && computerMove == 'Papier')){
       result.innerText="Wygrałeś";
       result.classList.add('win');
       wynik.innerText = `Wynik Komputera: ${scoreAI}
       Twoj Wynik: ${scorePlayer++}`;}
+    else{ (playerMove == 'Reset')
+    result.innerText='';
+    wynik.innerText = `Wynik Komputera: ${scoreAI=0}
+    Twoj Wynik: ${scorePlayer=0}`;
+    clearAll();
+    }
 }
 
 

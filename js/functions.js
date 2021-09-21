@@ -6,4 +6,9 @@ function printMessage(msg){
 
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
+	
+}
+
+function clearAll(){
+	document.getElementsByClassName('.container').innerHTML = '';
 }
