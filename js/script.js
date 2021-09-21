@@ -1,9 +1,9 @@
-var scorePlayer=0;
-var scoreAI=0;
-var result=document.querySelector('.result');
-var wynik = document.getElementById('wynik');
-var buttons=document.querySelectorAll(".btn");
-var playerMove;
+let scorePlayer=0;
+let scoreAI=0;
+let result=document.querySelector('.result');
+let wynik = document.getElementById('wynik');
+let buttons=document.querySelectorAll(".btn");
+let playerMove;
 buttons.forEach((button) => {
   button.addEventListener("click", ()=> {
     clearMessages();
@@ -20,7 +20,7 @@ buttons.forEach((button) => {
     }  
       
     
-      var computerMove, randomNumber;
+      let computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
 if (randomNumber == '1') {
   computerMove = 'Kamień';
@@ -42,15 +42,7 @@ if (playerMove == "Reset"){
 
 
 
-// playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-// console.log('Wpisana odpowiedź to: ' + playerInput);
-// if (playerInput == '1') {
-//   playerMove = 'kamień';
-// } else if (playerInput == '2') {
-//   playerMove = 'papier';
-// } else {
-//   playerMove = 'nożyce';
-// }
+
 
 
 function displayResult(playerMove, computerMove){
@@ -61,14 +53,14 @@ function displayResult(playerMove, computerMove){
     }
     else if( (playerMove == 'Kamień' && computerMove == 'Papier') || (playerMove == 'Papier' && computerMove == 'Nożyce') || (playerMove == 'Nożyce' && computerMove == 'Kamień')){
       result.innerText="Przegrałeś";
-      wynik.innerText = `Wynik Komputera: ${scoreAI++}
+      wynik.innerText = `Wynik Komputera: ${++scoreAI}
       Twoj Wynik: ${scorePlayer}`;
         result.classList.add('lose');}
     else if( (playerMove == 'Kamień' && computerMove == 'Nożyce') || (playerMove == 'Papier' && computerMove == 'Kamień') || (playerMove == 'Nożyce' && computerMove == 'Papier')){
       result.innerText="Wygrałeś";
       result.classList.add('win');
       wynik.innerText = `Wynik Komputera: ${scoreAI}
-      Twoj Wynik: ${scorePlayer++}`;}
+      Twoj Wynik: ${++scorePlayer}`;}
     else{ (playerMove == 'Reset')
     result.innerText='';
     wynik.innerText = `Wynik Komputera: ${scoreAI=0}
