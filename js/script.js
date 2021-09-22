@@ -4,6 +4,7 @@ let result=document.querySelector('.result');
 let wynik = document.getElementById('wynik');
 let buttons=document.querySelectorAll(".btn");
 let playerMove;
+
 buttons.forEach((button) => {
   button.addEventListener("click", ()=> {
     clearMessages();
@@ -37,13 +38,6 @@ if (playerMove == "Reset"){
     }
   )
 });
-
-
-
-
-
-
-
 
 function displayResult(playerMove, computerMove){
   result.classList.remove('draw','lose','win')
